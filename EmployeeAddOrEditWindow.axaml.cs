@@ -29,14 +29,15 @@ namespace EmplStruct
             SetEditMode(false);
         }
 
-        public EmployeeAddOrEditWindow(Employee? employee = null, bool isEditMode = false)
+        public EmployeeAddOrEditWindow(Employee? employee = null)
         {
             InitializeComponent();
             _db = new User15Context();
             _employee = employee ?? new Employee();
             LoadData();
+            
             LoadEmployee(_employee);
-            SetEditMode(isEditMode);
+            SetEditMode(true);
         }
 
         private void LoadData()

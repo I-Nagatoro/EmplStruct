@@ -7,59 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dec0f321-eef9-4c6e-b22c-eb882a2ca95e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/Debug/net8.0/EmplStruct.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/net8.0/EmplStruct.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EmployeeStruct/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EmployeeStruct/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EmployeeStruct/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EmployeeStruct/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeEditWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeeEditWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeEditWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeeEditWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeStruct.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EmplStruct.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeStruct.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EmplStruct.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MassageBox.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/MessageBox.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MassageBox.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessageBox.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Department.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Department.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DepartmentSubdivision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DepartmentSubdivision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Employee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/EmployeeRelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/EmployeeRelation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Position.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Position.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User15Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User15Context.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/app.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/EmployeeStruct.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/EmployeeStruct.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/EmployeeStruct.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/EmployeeStruct.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Avalonia/references" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Avalonia/references" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Avalonia/resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Avalonia/resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/EmployeeStruct.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/EmployeeStruct.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/EmployeeStruct.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/EmployeeStruct.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/EmployeeStruct.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/EmployeeStruct.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/EmployeeStruct.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/EmployeeStruct.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/EmployeeStruct.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="dec0f321-eef9-4c6e-b22c-eb882a2ca95e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,12 +25,12 @@
     &quot;assignee&quot;: &quot;I-Nagatoro&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/youngrockman/EmployeeStruct.git&quot;,
-    &quot;accountId&quot;: &quot;c80052f4-8acd-4796-af16-82de2ea598a4&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/I-Nagatoro/EmplStruct.git",
+    "accountId": "c80052f4-8acd-4796-af16-82de2ea598a4"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b90705926ae4f10aa01bbe3f1025828c90908/da/79e1872d/InvalidOperationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/351e673a8f7f56c2ab2fb665fe11e4d180701a193227715b47f95fd417dd0/EntityGraphAttacher.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.EmplStruct.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.EmployeeStruct.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.EmplStruct.executor": "Run",
+    ".NET Project.EmployeeStruct.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="EmplStruct" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/net8.0/EmplStruct.exe" />
@@ -147,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749052342783</updated>
       <workItem from="1749052343897" duration="2033000" />
-      <workItem from="1749054423319" duration="1491000" />
+      <workItem from="1749054423319" duration="1834000" />
     </task>
     <servers />
   </component>

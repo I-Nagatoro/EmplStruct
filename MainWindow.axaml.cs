@@ -130,7 +130,7 @@ namespace EmplStruct
 
                 if (employeeFromDb is null) return;
 
-                var dialog = new EmployeeAddOrEditWindow(employeeFromDb, isEditMode: false);
+                var dialog = new EmployeeAddOrEditWindow(employeeFromDb);
                 var result = await dialog.ShowDialog<bool>(this);
                 if (result)
                 {

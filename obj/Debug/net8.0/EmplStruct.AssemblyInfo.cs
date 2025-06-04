@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmplStruct")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bedcacf19dedd8d1a1b6aa7248ee0c56a10dc8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ee21f40fbf55f4cfd75f4568f37e1b605fdb3e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmplStruct")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmplStruct")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
