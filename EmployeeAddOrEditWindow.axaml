@@ -1,0 +1,111 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="EmplStruct.EmployeeAddOrEditWindow"
+        x:CompileBindings="False"
+        Title="Карточка сотрудника"
+        Width="600" Height="700"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid RowDefinitions="Auto,*,Auto" Margin="20">
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Основная информация" FontWeight="Bold" FontSize="16"/>
+
+                <Grid ColumnDefinitions="*,*" >
+                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                        <TextBlock Text="Фамилия *"/>
+                        <TextBox x:Name="LastNameTextBox"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Имя *"/>
+                        <TextBox x:Name="FirstNameTextBox"/>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel>
+                    <TextBlock Text="Отчество"/>
+                    <TextBox x:Name="MiddleNameTextBox"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Офис *"/>
+                    <TextBox x:Name="OfficeTextBox"/>
+                </StackPanel>
+
+                <TextBlock Text="Контактная информация" FontWeight="Bold" Margin="0,10,0,0"/>
+
+                <StackPanel>
+                    <TextBlock Text="Мобильный телефон"/>
+                    <TextBox x:Name="MobilePhoneTextBox"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Рабочий телефон *"/>
+                    <TextBox x:Name="WorkPhoneTextBox"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Email *"/>
+                    <TextBox x:Name="EmailTextBox"/>
+                </StackPanel>
+
+                <TextBlock Text="Должностная информация" FontWeight="Bold" Margin="0,10,0,0"/>
+
+                <StackPanel>
+                    <TextBlock Text="Структурное подразделение *"/>
+                    <ComboBox x:Name="DepartmentsComboBox">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Subdivisionname}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Должность *"/>
+                    <ComboBox x:Name="PositionsComboBox">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Positionname}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Помощник"/>
+                    <ComboBox x:Name="AssistantsComboBox">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding Lastname}" />
+                                    <Run Text=" " />
+                                    <Run Text="{Binding Firstname}" />
+                                    <Run Text=" " />
+                                    <Run Text="{Binding Middlename}" />
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
+
+                <TextBlock Text="Дополнительная информация" FontWeight="Bold" Margin="0,10,0,0"/>
+                <StackPanel>
+                    <TextBlock Text="Дата рождения"/>
+                    <DatePicker x:Name="BirthDatePicker"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" Margin="0,20,0,0">
+            <Button x:Name="EditButton" Content="Редактировать" Click="EditButton_Click"/>
+            <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" IsVisible="False"/>
+            <Button x:Name="CancelButton" Content="Отмена" Click="CancelButton_Click" IsVisible="False"/>
+            <Button x:Name="CloseButton" Content="Закрыть" Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

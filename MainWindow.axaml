@@ -1,0 +1,71 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="EmplStruct.MainWindow"
+        x:CompileBindings="False"
+        Title="Сотрудники и отделы"
+        Width="1200" Height="800"
+        mc:Ignorable="d">
+    
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="10" Margin="10">
+            <Button Content="Новый сотрудник" Click="AddEmployee_Click"/>
+            <Button Content="Обновить" Click="ReloadData_Click"/>
+            <TextBox x:Name="SearchInput" Width="300" Watermark="Поиск..." TextChanged="SearchInput_TextChanged"/>
+        </StackPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="10">
+                <TextBlock Text="Отделы" FontSize="16" FontWeight="Bold" Margin="0 0 0 10"/>
+                <ListBox x:Name="DepartmentListBox" ItemsSource="{Binding Departments}" SelectionChanged="DepartmentList_SelectionChanged" Height="200">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Departmentname}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                
+                <TextBlock Text="Подразделения" FontSize="14" FontWeight="Bold" Margin="0 20 0 10"/>
+                <ListBox x:Name="SubdivisionListBox" ItemsSource="{Binding Subdivisions}" SelectionChanged="SubdivisionList_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Subdivisionname}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+
+            <ListBox Grid.Column="1" Margin="10" ItemsSource="{Binding Employees}" x:Name="EmployeeListBox"
+                     DoubleTapped="EmployeeListBox_DoubleTapped">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Gray" BorderThickness="0 0 0 1" Padding="8">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="14" FontWeight="Bold" Text="{Binding Firstname}"/>
+                                    <TextBlock FontSize="14" FontWeight="Bold" Text=" "/>
+                                    <TextBlock FontSize="14" FontWeight="Bold" Text="{Binding Lastname}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Position.Positionname}"/>
+                                <TextBlock>
+                                    <Run Text="Телефон: "/>
+                                    <Run Text="{Binding Workphone}"/>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Email: "/>
+                                    <Run Text="{Binding Email}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </DockPanel>
+</Window>
