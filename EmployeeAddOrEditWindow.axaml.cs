@@ -26,7 +26,7 @@ namespace EmplStruct
             _employee = new Employee();
             _db = new User15Context();
             LoadData();
-            SetEditMode(false);
+            SetEditMode(true);
         }
 
         public EmployeeAddOrEditWindow(Employee? employee = null)
@@ -37,7 +37,7 @@ namespace EmplStruct
             LoadData();
             
             LoadEmployee(_employee);
-            SetEditMode(true);
+            SetEditMode(false);
         }
 
         private void LoadData()
@@ -47,31 +47,31 @@ namespace EmplStruct
             _assistants = _db.Employees
                 .Where(e => e.Employeeid != _employee.Employeeid)
                 .ToList();
-            this.FindControl<ComboBox>("DepartmentsComboBox").ItemsSource = _subdivisions;
-            this.FindControl<ComboBox>("PositionsComboBox").ItemsSource = _positions;
-            this.FindControl<ComboBox>("AssistantsComboBox").ItemsSource = _assistants;
+            DepartmentsComboBox.ItemsSource = _subdivisions;
+            PositionsComboBox.ItemsSource = _positions;
+            AssistantsComboBox.ItemsSource = _assistants;
         }
 
         private void SetEditMode(bool isEditing)
         {
             _isEditing = isEditing;
-            this.FindControl<TextBox>("LastNameTextBox").IsReadOnly = !isEditing;
-            this.FindControl<TextBox>("FirstNameTextBox").IsReadOnly = !isEditing;
-            this.FindControl<TextBox>("MiddleNameTextBox").IsReadOnly = !isEditing;
-            this.FindControl<TextBox>("MobilePhoneTextBox").IsReadOnly = !isEditing;
-            this.FindControl<TextBox>("WorkPhoneTextBox").IsReadOnly = !isEditing;
-            this.FindControl<TextBox>("EmailTextBox").IsReadOnly = !isEditing;
-            this.FindControl<TextBox>("OfficeTextBox").IsReadOnly = !isEditing;
+            LastNameTextBox.IsReadOnly = !isEditing;
+            FirstNameTextBox.IsReadOnly = !isEditing;
+            MiddleNameTextBox.IsReadOnly = !isEditing;
+            MobilePhoneTextBox.IsReadOnly = !isEditing;
+            WorkPhoneTextBox.IsReadOnly = !isEditing;
+            EmailTextBox.IsReadOnly = !isEditing;
+            OfficeTextBox.IsReadOnly = !isEditing;
 
-            this.FindControl<DatePicker>("BirthDatePicker").IsEnabled = isEditing;
-            this.FindControl<ComboBox>("DepartmentsComboBox").IsEnabled = isEditing;
-            this.FindControl<ComboBox>("PositionsComboBox").IsEnabled = isEditing;
-            this.FindControl<ComboBox>("AssistantsComboBox").IsEnabled = isEditing;
+            BirthDatePicker.IsEnabled = isEditing;
+            DepartmentsComboBox.IsEnabled = isEditing;
+            PositionsComboBox.IsEnabled = isEditing;
+            AssistantsComboBox.IsEnabled = isEditing;
 
-            this.FindControl<Button>("EditButton").IsVisible = !isEditing;
-            this.FindControl<Button>("SaveButton").IsVisible = isEditing;
-            this.FindControl<Button>("CancelButton").IsVisible = isEditing;
-            this.FindControl<Button>("CloseButton").IsVisible = !isEditing;
+            EditButton.IsVisible = !isEditing;
+            SaveButton.IsVisible = isEditing;
+            CancelButton.IsVisible = isEditing;
+            CloseButton.IsVisible = !isEditing;
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
@@ -84,15 +84,15 @@ namespace EmplStruct
             if (!ValidateInputs()) 
                 return;
 
-            _employee.Lastname = this.FindControl<TextBox>("LastNameTextBox").Text;
-            _employee.Firstname = this.FindControl<TextBox>("FirstNameTextBox").Text;
-            _employee.Middlename = this.FindControl<TextBox>("MiddleNameTextBox").Text;
-            _employee.Mobilephone = this.FindControl<TextBox>("MobilePhoneTextBox").Text;
-            _employee.Workphone = this.FindControl<TextBox>("WorkPhoneTextBox").Text;
-            _employee.Email = this.FindControl<TextBox>("EmailTextBox").Text;
-            _employee.Office = this.FindControl<TextBox>("OfficeTextBox").Text;
+            _employee.Lastname = LastNameTextBox.Text;
+            _employee.Firstname = FirstNameTextBox.Text;
+            _employee.Middlename = MiddleNameTextBox.Text;
+            _employee.Mobilephone = MobilePhoneTextBox.Text;
+            _employee.Workphone = WorkPhoneTextBox.Text;
+            _employee.Email = EmailTextBox.Text;
+            _employee.Office = OfficeTextBox.Text;
 
-            var selected = this.FindControl<DatePicker>("BirthDatePicker").SelectedDate;
+            var selected = BirthDatePicker.SelectedDate;
             if (selected.HasValue)
             {
                 _employee.Birthdate = DateOnly.FromDateTime(selected.Value.DateTime);
@@ -102,13 +102,13 @@ namespace EmplStruct
                 _employee.Birthdate = null;
             }
 
-            _employee.Subdivisionid = (this.FindControl<ComboBox>("DepartmentsComboBox")
-                                          .SelectedItem as DepartmentSubdivision)
-                                      ?.Subdivisionid ?? 0;
+            _employee.Subdivisionid = (DepartmentsComboBox
+                    .SelectedItem as DepartmentSubdivision)
+                ?.Subdivisionid ?? 0;
 
-            _employee.Positionid = (this.FindControl<ComboBox>("PositionsComboBox")
-                                        .SelectedItem as Position)
-                                  ?.Positionid ?? 0;
+            _employee.Positionid = (PositionsComboBox
+                    .SelectedItem as Position) 
+                ?.Positionid ?? 0;
 
             if (_employee.Employeeid == 0)
             {
@@ -134,8 +134,7 @@ namespace EmplStruct
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            LoadEmployee(_employee);
-            SetEditMode(false);
+            Close(false);
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -147,11 +146,11 @@ namespace EmplStruct
         {
             var errors = new List<string>();
 
-            var lastName = this.FindControl<TextBox>("LastNameTextBox").Text;
-            var firstName = this.FindControl<TextBox>("FirstNameTextBox").Text;
-            var workPhone = this.FindControl<TextBox>("WorkPhoneTextBox").Text;
-            var email = this.FindControl<TextBox>("EmailTextBox").Text;
-            var office = this.FindControl<TextBox>("OfficeTextBox").Text;
+            var lastName = LastNameTextBox.Text;
+            var firstName = FirstNameTextBox.Text;
+            var workPhone = WorkPhoneTextBox.Text;
+            var email = EmailTextBox.Text;
+            var office = OfficeTextBox.Text;
 
             if (string.IsNullOrWhiteSpace(lastName))
                 errors.Add("Фамилия обязательна");
@@ -165,7 +164,7 @@ namespace EmplStruct
                 errors.Add("Офис обязателен");
 
             var phoneRegex = new Regex(@"^[0-9+()\-\s#]{1,20}$");
-            var mobileText = this.FindControl<TextBox>("MobilePhoneTextBox").Text;
+            var mobileText = MobilePhoneTextBox.Text;
             if (!string.IsNullOrEmpty(mobileText) && !phoneRegex.IsMatch(mobileText))
                 errors.Add("Неверный формат мобильного телефона");
             if (!phoneRegex.IsMatch(workPhone))
@@ -186,39 +185,39 @@ namespace EmplStruct
 
         private void LoadEmployee(Employee employee)
         {
-            this.FindControl<TextBox>("LastNameTextBox").Text = employee.Lastname;
-            this.FindControl<TextBox>("FirstNameTextBox").Text = employee.Firstname;
-            this.FindControl<TextBox>("MiddleNameTextBox").Text = employee.Middlename;
-            this.FindControl<TextBox>("MobilePhoneTextBox").Text = employee.Mobilephone;
-            this.FindControl<TextBox>("WorkPhoneTextBox").Text = employee.Workphone;
-            this.FindControl<TextBox>("EmailTextBox").Text = employee.Email;
-            this.FindControl<TextBox>("OfficeTextBox").Text = employee.Office;
+            LastNameTextBox.Text = employee.Lastname;
+            FirstNameTextBox.Text = employee.Firstname;
+            MiddleNameTextBox.Text = employee.Middlename;
+            MobilePhoneTextBox.Text = employee.Mobilephone;
+            WorkPhoneTextBox.Text = employee.Workphone;
+            EmailTextBox.Text = employee.Email;
+            OfficeTextBox.Text = employee.Office;
 
             if (employee.Birthdate.HasValue)
             {
                 var dt = employee.Birthdate.Value.ToDateTime(new TimeOnly(0, 0));
-                this.FindControl<DatePicker>("BirthDatePicker").SelectedDate = new DateTimeOffset(dt);
+                BirthDatePicker.SelectedDate = new DateTimeOffset(dt);
             }
             else
             {
-                this.FindControl<DatePicker>("BirthDatePicker").SelectedDate = null;
+                BirthDatePicker.SelectedDate = null;
             }
 
-            this.FindControl<ComboBox>("DepartmentsComboBox").SelectedItem =
+            DepartmentsComboBox.SelectedItem =
                 _subdivisions.FirstOrDefault(s => s.Subdivisionid == employee.Subdivisionid);
 
-            this.FindControl<ComboBox>("PositionsComboBox").SelectedItem =
+            PositionsComboBox.SelectedItem =
                 _positions.FirstOrDefault(p => p.Positionid == employee.Positionid);
 
             var assistantRelation = _db.EmployeeRelations.FirstOrDefault(r => r.Employeeid == employee.Employeeid);
             if (assistantRelation != null)
             {
-                this.FindControl<ComboBox>("AssistantsComboBox").SelectedItem =
+                AssistantsComboBox.SelectedItem =
                     _assistants.FirstOrDefault(a => a.Employeeid == assistantRelation.Assistantid);
             }
             else
             {
-                this.FindControl<ComboBox>("AssistantsComboBox").SelectedItem = null;
+                AssistantsComboBox.SelectedItem = null;
             }
         }
     }
